@@ -77,6 +77,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'picha.wsgi.application'
 
 
+#Amazon Server file and folder settings:
+    
+AWS_S3_ACCESS_KEY_ID='AMAZON_ID'
+AWS_S3_SECRET_ACCESS_KEY='AMAZON_KEY' 
+AWS_STORAGE_BUCKET_NAME='development-branch'
+SECRET_KEY='A long string with many different types of characters'
+bucket_name = 'development-branch'
+
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
@@ -90,7 +98,6 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -100,7 +107,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
