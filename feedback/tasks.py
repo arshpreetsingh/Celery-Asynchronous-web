@@ -22,14 +22,14 @@ def send_feedback_email_task(email, message):
            
 @task()
 def amazon_uploader():
-    worker = AmazonTask(settings.AWS_S3_ACCESS_KEY_ID,settings.AWS_S3_SECRET_ACCESS_KEY,
-                        settings.AWS_STORAGE_BUCKET_NAME,settings.SECRET_KEY)  
+    
+    worker = AmazonTask(settings.AWS_S3_ACCESS_KEY_ID,settings.AWS_S3_SECRET_ACCESS_KEY,settings.AWS_STORAGE_BUCKET_NAME,settings.SECRET_KEY)  
     # implement file upload-section here.
 
     worker.upload_image(file_name,file_key,path)
     
 @task()
-    worker = AmazonTask(settings.AWS_S3_ACCESS_KEY_ID,settings.AWS_S3_SECRET_ACCESS_KEY,
-                        settings.AWS_STORAGE_BUCKET_NAME,settings.SECRET_KEY)  
+def system_l():
+    worker = AmazonTask(settings.AWS_S3_ACCESS_KEY_ID,settings.AWS_S3_SECRET_ACCESS_KEY,settings.AWS_STORAGE_BUCKET_NAME,settings.SECRET_KEY)  
     # implement file upload stuff here as well. :)
     worker.create_thumb_file(src_file,file_key,path,size)

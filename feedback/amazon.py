@@ -7,6 +7,7 @@ Created on Thu Apr 27 16:27:28 2017
 """
 
 class AmazonTask(object):
+ 
     def __init__(self,amazon_ID,amazon_key,bucket_name,secret_key):
         self.amazon_ID=amazon_ID
         self.amazon_key=amzon_key
@@ -24,7 +25,8 @@ class AmazonTask(object):
     def create_thumb_file(self,src_file,file_key,path,size):
         conn = boto.connecet_s3(self.amazon_id,self.aws_secret)
         bucket = conn.get_bucket(self.bucket_name)
-        conn = boto.connect_s3(AWS_S3_ACCESS_KEY_ID,AWS_S3_SECRET_ACCESS_KEY)
+        conn = boto.connect_s3(settings.AWS_S3_ACCESS_KEY_ID,
+                                settings.AWS_S3_SECRET_ACCESS_KEY)
         bucket = conn.get_bucket(self.bucket_name)
         k = Key(bucket)
         im = Image.open(src_file)
