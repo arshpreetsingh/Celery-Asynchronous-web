@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Apr 27 16:27:28 2017
-
 @author: metal-machine
 """
-
+import boto
+import boto.s3
 class AmazonTask(object):
  
     def __init__(self,amazon_ID,amazon_key,bucket_name,secret_key):

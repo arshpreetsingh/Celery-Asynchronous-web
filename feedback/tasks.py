@@ -3,8 +3,6 @@ from celery.utils.log import get_task_logger
 from PIL import Image
 from amazon import AmazonTask
 from feedback.emails import send_feedback_email
-import boto
-import boto.s3
 import sys
 from boto.s3.key import Key
 import os

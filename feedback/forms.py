@@ -15,3 +15,7 @@ class FeedbackForm(forms.Form):
             return False
         send_feedback_email_task.delay(self.cleaned_data['email'], self.cleaned_data['message'])
                                                             
+class UploadFileform(forms.Form):
+    title = forms.CharField(max_length=50)
+    file_data = forms.FileField()
+    
